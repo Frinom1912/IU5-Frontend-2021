@@ -51,6 +51,10 @@ html, body {
 
 }
 
+td, th {
+    width: 10px;
+}
+
 body {
     background-color: thistle;
 }
