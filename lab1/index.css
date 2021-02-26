@@ -1,0 +1,17 @@
+.title {
+    color: gray;
+    font-size: 36px;
+    padding: 30px;
+}
+
+.post {
+    line-height: 1.56;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+    color: black;
+    font-size: 18px;
+}
+
+img {
+    border-style: solid;
+
+}
