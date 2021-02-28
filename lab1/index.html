@@ -1,15 +1,220 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <title>Логические операции</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 
 <body>
-    lab1
+    <span class="block-left">
+        <center><img src="1.png" alt="image" width="224" height="300"></center>
+        <div id="text">
+            <center>Вход в учетную запись</center><br>
+        </div>
+        <form>
+            <label for="user">Имя пользователя</label><br>
+            <input type="text" id="user" name="user"><br><br>
+            <label for="pass">Пароль</label><br>
+            <input type="password" id="pass" name="pass"><br><br>
+            <select name='selector'>
+                <option disabled selected>Выберите сервер</option>
+                <option value="1">Сервер 1</option>
+                <option value="2">Сервер 2</option>
+            </select><br><br>
+            <input type="button" value="Зайти">
+        </form>
+    </span>
+    <span class="block-right">
+            <h1>
+                Алгебра логики
+            </h1>
+            <div id="text"> 
+                <p>
+                    Алгебра логики - раздел математической логики, в котором изучаются логические операции над высказываниями. Чаще всего предполагается, что высказывания могут быть только истинными или ложными, то есть используется так называемая бинарная или двоичная логика, в отличие от, например, троичной логики.
+                </p>
+            </div>
+            <h2>    
+                Определения
+            </h2>
+            <div id="text">
+                <p>
+                    Базовыми элементами, которыми оперирует алгебра логики, являются высказывания.
+                </p>
+                <p>
+                    Высказывания строятся над множеством: \({B=\{\lnot,\wedge,\lor,0,1\}}\), <sub>где \({0 и 1\ } - константы\)</sub>
+                </p>
+                <p>где:</p>
+                $${\lnot\ } - отрицание$$
+                $${\wedge\ } - конъюнкция$$
+                $${\lor\ } - дизъюнкция$$
+                <br>
+                <p>
+                    <span style="background-color: #0b3601; color: orangered; display: inline;">
+                            Простейший и наиболее широко применяемый пример
+                    </span>
+                    &nbsp; такой алгебраической системы строится с использованием множества B, состоящего всего из двух элементов:
+                    $$B=\{True, False\}$$
+                </p>
+                <br>
+                <p>
+                    Количество строк в таблице истинности зависит от количества переменных. Пусть переменных <span style="font-style:italic">k</span>, тогда количество строк:
+                    <br>
+                    <center><span style="font-style:italic;">N&nbsp;=&nbsp;2<sup>k</sup></span></center>
+                </p>
+            </div>
+
+            <h2>
+                Аксиомы
+            </h2>
+            
+            <ul id="text">
+                <li>
+                    \(\overline{\overline{x}}=x\)
+                </li>
+                <li>
+                    \(x \lor {\overline{x}}\ =\ 1\)
+                </li>
+                <li>
+                    \(x \lor 1 =\ 1\)
+                </li>
+                <li>
+                    \(x \lor x\ =\ x\)
+                </li>
+                <li>
+                    \(x \lor 0\ =\ x\)
+                </li>
+                <li>
+                    \(x \wedge \overline{x}\ =\ 0\)
+                </li>
+                <li>
+                    \(x \wedge x\ =\ x\)
+                </li>
+                <li>
+                    \(x \wedge 0\ =\ 0\)
+                </li>
+                <li>
+                    \(x \wedge 1\ =\ x\)
+                </li>
+            </ul>
+
+            <h2>
+                Свойства операций
+            </h2>
+
+            <table border="1" id="text" align="center">
+                <tr>
+                    <td>
+                        1)
+                    </td>
+                    <td>
+                        Коммутативность
+                    </td>
+                    <td>
+                        \(x \circ y = y \circ x, \circ \in \{\wedge, \lor, \oplus, \equiv, \mid, \downarrow\}\)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        2)
+                    </td>
+                    <td>
+                        Ассоциативность
+                    </td>
+                    <td>
+                        \((x \circ y) \circ z = x \circ (y \circ z), \circ \in \{\wedge, \lor, \oplus, \equiv\}\)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        3)
+                    </td>
+                    <td>
+                        Дистрибутивность конъюнкции
+                    </td>
+                    <td>
+                        \(x \wedge (y \lor z) = (x \wedge y) \lor (x \wedge z)\)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        4)
+                    </td>
+                    <td>
+                        Дистрибутивность дизъюнкции
+                    </td>
+                    <td>
+                        \(x \lor (y \wedge z) = (x \lor y) \wedge (x \lor z)\)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        5)
+                    </td>
+                    <td>
+                        Дистрибутивность XOR
+                    </td>
+                    <td>
+                        \(x \wedge (y \oplus z) = (x \wedge y) \oplus (x \wedge z)\)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        6)
+                    </td>
+                    <td>
+                        Законы де Моргана
+                    </td>
+                    <td>
+                        \(\overline{x \wedge y} = {\bar{x}} \lor {\bar{y}}; \ \ \overline{x \lor y} = {\bar{x}} \wedge {\bar{y}}\)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        7)
+                    </td>
+                    <td>
+                        Законы поглощения
+                    </td>
+                    <td>
+                        \(x \wedge (x \lor y) = x; \ \ x \lor (x \wedge y) = x\)
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <h2>
+                Построение таблиц истинностей
+            </h2>
+
+            <span id="text">
+                <p>Универсальная схема построения кругов Эйлера: <br></p>
+                <img src="pic1.png" alt="image" style="float: left; margin: 25px">
+                <br>
+                <a href="https://ru.wikipedia.org/wiki/%D0%A2%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0_%D0%B8%D1%81%D1%82%D0%B8%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8", target="_blnak">Подробнее о таблицах истинностей</a>
+                <br>
+                <a href="https://math.semestr.ru/inf/table.php", target="_blank">Построитель таблиц истинности</a>
+                <br><br>
+                <p>
+                    Алгоритм построения таблиц истинности сложных выражений:
+                    
+                    <ol>
+                        <li>Посчитать число переменных в выражении</li>
+                        <li>Подсчитать общее число логических операций в выражении</li>
+                        <li>Установить последовательность выполнения операций</li>
+                        <li>Определить число столбцов в таблице: число переменных + число операций</li>
+                        <li>Определить число строк: <span style="font-style:italic;">N&nbsp;=&nbsp;2<sup>k</sup></span> </li>
+                        <li>Выписать наборы входных переменных</li>
+                        <li>Заполнить таблицы по столбцам</li>
+                    </ol>
+                </p>                    
+            </span>
+    </span>
+
 </body>
 
-</html>
+</html> 
