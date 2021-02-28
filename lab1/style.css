@@ -6,16 +6,29 @@ a:visited {
     color:slateblue;
 }
 
+a:active {
+    color: #f00;
+}
+
 #text {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.3;
 }
 
-.content {
+.block-right {
+    display:inline-block;
     line-height: 1.3;
-    padding: 1em;
+    padding: 1vw;
+    width: 80%;
     float: right;
-    width: 85%;
+}
+
+.block-left {
+    display:inline-block;
+    width: 15%;
+    height: 57%;
+    padding: 1em;
+    background-color: wheat;
 }
 
 h1 {
@@ -31,12 +44,9 @@ h2 {
 h1, h2 {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
     border-bottom: 1px solid gray;
+    margin-top: 0;
+    margin-bottom: 15px;
 }
-
-div {
-    margin:0;
-}
-
 
 
 p {
@@ -45,14 +55,19 @@ p {
     margin: 0;
 }
 
+p::selection {
+    color: #ff0;
+    background-color: black;
+}
+
 html, body {
     height: 100%;
     margin:0;
-
+    width: 100%;
 }
 
-td, th {
-    width: 10px;
+td {
+    padding: 2px;
 }
 
 body {
