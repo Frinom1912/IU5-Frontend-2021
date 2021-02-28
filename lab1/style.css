@@ -16,7 +16,6 @@ a:active {
 }
 
 .block-right {
-    display:inline-block;
     line-height: 1.3;
     padding: 1vw;
     width: 80%;
