@@ -5,7 +5,11 @@
     --primary-color: #4452FE;
 }
 
-img {
+/* img {
+    max-width: 100%;
+} */
+
+.w {
     max-width: 100%;
 }
 
@@ -14,8 +18,18 @@ img.w_cut {
 }
 
 .containter {
+    display: flex;
     width: 100%;
     height: 100%;
+    justify-content: space-between;
+}
+
+.page1 {
+    height: 1675px;
+}
+
+.page2 {
+    height: 1112;
 }
 
 .screens {
@@ -29,15 +43,17 @@ img.w_cut {
     overflow: hidden;
     position: relative;
     line-height: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .gradient::after {
     content: "";
     display: block;
     width: 100%;
-    height: 552px;
+    height: 60%;
     position: absolute;
-    top: 442px;
+    top: 30%;
     left: 0;
     background: transparent;
     background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, black 66%);
@@ -77,6 +93,13 @@ img.w_cut {
     font-style: normal;
     margin-right: 0%;
     margin-left: 2%;
+    overflow: hidden;
+}
+
+.but-text {
+    display: block;
+    overflow: hidden;
+    width: 66px;
 }
 
 .try-but_color {
@@ -93,6 +116,7 @@ img.w_cut {
     line-height: 30px;
     margin: 0px 31% 4px 31%;
     padding: 10px;
+    overflow: hidden;
 }
 
 .text-huge {
@@ -101,6 +125,13 @@ img.w_cut {
     margin-left: 27%;
     margin-right: 27%;
     font-weight: 500;
+    overflow: hidden;
+}
+
+.text-huge_shrink {
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 62px;
 }
 
 .bn {
@@ -108,19 +139,20 @@ img.w_cut {
     line-height: 24px;
     background-color: var(--background-color);
     color: var(--text-color);
-    padding: 0;
+    padding: 0px 10px;
     height: 25px;
     font-family: Graphik;
     cursor: pointer;
     border: none;
     letter-spacing: 0.2px;
     font-weight: 500;
+
 }
 
 .login {
     font-size: 107%;
     border: 1px solid var(--text-color);
-    padding: 10px 46px;
+    padding: 10px 56px;
     height: 50px;
 }
 
@@ -199,6 +231,9 @@ body {
     body {
         font-size: 12px;
     }
+    .page1 {
+        height: 1235px;
+    }
     .text-huge {
         font-size: 62px;
         line-height: 72px;
@@ -209,7 +244,9 @@ body {
     .menu {
         display: flex;
         height: 110px;
-        margin: 0px 5% 57px 6%;
+        margin: 0px 5% 57px 5%;
+        align-self: center;
+        width: 90%;
     }
     .menu-item {
         text-align: center;
@@ -217,11 +254,12 @@ body {
     }
     .menu-item_left {
         padding: 0 0 0 0;
+        margin: 0px 12% 0px 0px;
     }
     .menu-item_right {
         display: flex;
         align-items: center;
-        padding: 0 0 0 17%;
+        margin: 0px 0px 0px 12%;
     }
     .menu-icon {
         display: block;
@@ -292,9 +330,9 @@ body {
         content: "";
         display: block;
         width: 100%;
-        height: 72%;
+        height: 90%;
         position: absolute;
-        top: 126px;
+        top: 30%;
         left: 0;
         background: transparent;
         background-image: linear-gradient(rgba(30, 30, 30, 0) 0%, #0E0E0E 65%);
@@ -302,6 +340,21 @@ body {
     .screens {
         width: 100%;
         margin: 0;
-        height: 454px;
+        height: 539px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .menu-item_left {
+        padding: 0 0 0 0;
+        margin: 0px 0 0px 0px;
+    }
+    .menu-item_right {
+        display: flex;
+        align-items: center;
+        margin: 0px 0px 0px 0;
+    }
+    img {
+        max-width: 100%;
     }
 }
