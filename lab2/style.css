@@ -2,8 +2,12 @@
 :root {
     --background-color: #181818;
     --text-color: #ffffff;
+    --black-text: #000000;
+    --second-text: #5C5C5C;
     --primary-color: #4452FE;
+    --gray: #343434;
 }
+
 
 /* img {
     max-width: 100%;
@@ -11,6 +15,7 @@
 
 .w {
     max-width: 100%;
+    max-height: 100%;
 }
 
 img.w_cut {
@@ -24,18 +29,217 @@ img.w_cut {
     justify-content: space-between;
 }
 
+.page {
+    width: 100%;
+    padding: 50px 0px 50px 0px;
+}
+
 .page1 {
     height: 1675px;
 }
 
 .page2 {
-    height: 1112;
+    height: 1112px;
+}
+
+.page3 {
+    height: 932px;
+}
+
+.page4 {
+    height: 1016px;
+}
+
+.partners {
+    height: 485px;
+}
+
+.tests {
+    height: 884px;
+}
+
+.CTA {
+    height: 530px;
+}
+
+.footer {
+    height: 437px;
+}
+
+.paragraphe {
+    margin-top: 30px;
+    color: var(--text-color);
+    font-weight: 400;
+}
+
+.foot {
+    display: flex;
+    height: 224px;
+    margin: 107px 274px;
+    flex-direction: row;
+}
+
+.foot-item {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+
+.foot-lists {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.foot-list {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.foot-rows {
+    margin-left: 200px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.foot-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    margin: 80px 94px;
+    margin-right: 0;
+}
+
+.column-item {
+    padding: 19px 0;
+}
+
+.text-content {
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    margin-left: 13px;
+}
+
+.icon {
+    padding: 0 13px;
+}
+
+.client {
+    display: flex;
+}
+
+.comment-containers {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+.vertical-containers {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.brands {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.brand {
+    margin: 17px;
+    height: 60px;
+}
+
+.gallery-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 710px;
+}
+
+.gallery-item-line {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* justify-content: space-evenly; */
+}
+
+.gallery-item {
+    border-radius: 10px;
+    margin: 0 17px;
+}
+
+.card-container {
+    margin-top: 44px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--text-color);
+    border: 1px solid #D3D3D3;
+    box-sizing: border-box;
+    border-radius: 10px;
+    color: #0E0E0E;
+    height: 626px;
+    width: 30%;
+    margin: 0px 17px;
+}
+
+.card-black {
+    background-color: var(--background-color);
+    width: 430px;
+    height: auto;
+    align-items: unset;
+    padding: 40px;
+    margin: 10px 12px;
+}
+
+.card-new {
+    flex-direction: row;
+    background-color: var(--gray);
+    width: 1220px;
+    height: 370px;
+    align-items: unset;
+    margin: 80px 180px;
+    border-radius: 33px;
+}
+
+.card-item {
+    color: var(--text-color);
+    width: 50%;
+}
+
+.right {
+    right: 0;
+    border-radius: 0px 0px 33px 0px;
 }
 
 .screens {
     display: flex;
     justify-content: center;
-    margin: 0px 13px;
+    /* margin: 0px 1%; */
     height: 994px;
 }
 
@@ -44,19 +248,19 @@ img.w_cut {
     position: relative;
     line-height: 0;
     width: 100%;
-    height: 100%;
 }
 
-.gradient::after {
+.gradient:after {
     content: "";
     display: block;
     width: 100%;
-    height: 60%;
+    height: 55%;
     position: absolute;
-    top: 30%;
+    top: 44%;
     left: 0;
     background: transparent;
-    background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, black 66%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0) 0%, #0E0E0E 67%);
+    opacity: 0.8;
 }
 
 .text-container {
@@ -65,6 +269,7 @@ img.w_cut {
     justify-content: center;
     flex-direction: column;
     height: 394px;
+    margin-top: 60px;
 }
 
 .try-cont {
@@ -96,6 +301,11 @@ img.w_cut {
     overflow: hidden;
 }
 
+.try-but_centered {
+    display: flex;
+    justify-content: center;
+}
+
 .but-text {
     display: block;
     overflow: hidden;
@@ -110,13 +320,23 @@ img.w_cut {
 }
 
 .text {
+    align-self: center;
     text-align: center;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 30px;
-    margin: 0px 31% 4px 31%;
-    padding: 10px;
+    font-size: 125%;
+    line-height: 125%;
+    margin: 0px 31% 5px 31%;
+    padding: 10px 0px;
     overflow: hidden;
+}
+
+.paragraphe-no-margin {
+    margin: 0;
+    padding: 10px 0;
+}
+
+.text-second {
+    color: var(--second-text);
 }
 
 .text-huge {
@@ -146,7 +366,6 @@ img.w_cut {
     border: none;
     letter-spacing: 0.2px;
     font-weight: 500;
-
 }
 
 .login {
@@ -213,6 +432,60 @@ img.w_cut {
 
 .menu-item-container-item_right {
     /* padding: 0 0 0 25px; */
+}
+
+.frame {
+    margin: 80px 16% 0px 16%;
+    display: flex;
+    align-items: center;
+    height: 760px;
+}
+
+.frame-images {
+    position: relative;
+    width: 70%;
+    height: 759px;
+}
+
+.im-centered {
+    position: relative;
+    margin: 0px 4%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.im-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.text-item {
+    margin: 13px 20px;
+}
+
+.left-text {
+    align-self: left;
+    font-weight: 400;
+    font-size: 125%;
+    line-height: 125%;
+    margin: 0px 31% 5px 31%;
+    padding: 10px 0px;
+    overflow: hidden;
+}
+
+.headline {
+    font-size: 125%;
+    line-height: 125%;
+    letter-spacing: 0.1px;
+}
+
+.content {
+    font-size: 100%;
+    font-weight: 400;
+    line-height: 100%;
 }
 
 body {
@@ -321,7 +594,9 @@ body {
     }
     img.w_cut {
         display: block;
-        width: 100%
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
     }
     .gradient {
         width: 100%;
