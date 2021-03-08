@@ -67,52 +67,72 @@
                             </button>
             </div>
             <div class="screens">
-                <div class="gradient">
-                    <div style="display: flex; justify-content: center; width: 100%;">
-                        <img class="w" src="./pictures/screens.png" alt="">
-                        <img class="w_cut" src="./pictures/screens_cut.png" alt="">
-
-                    </div>
+                <div style="display: flex; justify-content: center; width: 100%;">
+                    <img class="w" src="./pictures/screens.png" alt="">
+                    <img class="gr" src="./icons/Gradient.svg" alt="">
+                    <img class="w_cut" src="./pictures/screens_cut.png" alt="">
                 </div>
+
             </div>
         </div>
         <div class="page page2">
-            <div class="text-container" style="height: 149px;">
+            <div class="text-container text-container_small_2x">
                 <div class="text-huge text-huge_shrink">
-                    Features
+                    FEATURES
                 </div>
-                <div class="text">
+                <div class="text text_less-margin">
                     Most calendars are designed for teams. Slate is designed for freelancers who want a simple way to plan their schedule.
                 </div>
             </div>
             <div class="frame">
                 <div class="frame-images">
-                    <img src="./pictures/Chat Bot.png" style="width:696px" alt="" class="im-centered">
+                    <img src="./pictures/Chat Bot.png" alt="" class="im-centered">
                     <img src="./pictures/Line Chart 1.png" alt="" class="im-right">
 
                 </div>
-                <div class="text-container" style="height: 652px; ">
-                    <div class="text-item">
-                        <div class="headline">
-                            <img src="./icons/cutlery.svg" alt=""> A single source of truth
+                <div class="text-container text-container_small">
+                    <div class="card card-no-border">
+                        <div class="client client-padding">
+                            <div>
+                                <img src="./icons/cutlery.svg" alt="">
+                            </div>
+                            <div class="text-content text-content_margin">
+                                <div>
+                                    A single source of truth
+                                </div>
+                            </div>
                         </div>
-                        <div class="content">
+                        <div class="paragraphe paragraphe-padding">
                             When you add work to your Slate calendar we automatically calculate useful insights
                         </div>
                     </div>
-                    <div class="text-item">
-                        <div class="headline">
-                            <img src="./icons/alien.svg" alt=""> Intuitive interface
+                    <div class="card card-no-border">
+                        <div class="client client-padding">
+                            <div>
+                                <img src="./icons/alien.svg" alt="">
+                            </div>
+                            <div class="text-content text-content_margin">
+                                <div>
+                                    Intuitive interface
+                                </div>
+                            </div>
                         </div>
-                        <div class="content">
+                        <div class="paragraphe paragraphe-padding">
                             When you add work to your Slate calendar we automatically calculate useful insights
                         </div>
                     </div>
-                    <div class="text-item">
-                        <div class="headline">
-                            <img src="./icons/infinity.svg" alt=""> Or with rules
+                    <div class="card card-no-border">
+                        <div class="client client-padding">
+                            <div>
+                                <img src="./icons/infinity.svg" alt="">
+                            </div>
+                            <div class="text-content text-content_margin">
+                                <div>
+                                    Or with rules
+                                </div>
+                            </div>
                         </div>
-                        <div class="content">
+                        <div class="paragraphe paragraphe-padding">
                             When you add work to your Slate calendar we automatically calculate useful insights
                         </div>
                     </div>
@@ -130,11 +150,11 @@
             </div>
             <div class="card-container">
                 <div class="card">
-                    <div class="text-container" style="height: 152px; margin: 40px 94px 0px 94px">
-                        <div class="text" style="font-weight: 500; margin: 0;">
+                    <div class="text-container text-card">
+                        <div class="text text-margin" style="font-weight: 500">
                             Work
                         </div>
-                        <div class="text text-second" style="font-size: 100%; margin: 10px 0 0 0;">
+                        <div class="text text-second">
                             Ever wondered if you're too reliant on a client for work? Slate helps you identify .
                         </div>
                     </div>
@@ -144,14 +164,14 @@
 
                         </span>
                     </button>
-                    <img src="pictures/Macbook Pro.png" alt="" style="padding-bottom: 40px;">
+                    <img class="card-photo" src="pictures/Macbook Pro.png" alt="" style="padding-bottom: 40px;">
                 </div>
                 <div class="card">
-                    <div class="text-container" style="height: 152px; margin: 40px 94px 0px 94px">
-                        <div class="text" style="font-weight: 500; margin: 0;">
+                    <div class="text-container text-card">
+                        <div class="text text-margin" style="font-weight: 500">
                             Design with real data
                         </div>
-                        <div class="text text-second" style="font-size: 100%; margin: 10px 0 0 0;">
+                        <div class="text text-second">
                             Ever wondered if you're too reliant on a client for work? Slate helps you identify .
                         </div>
                     </div>
@@ -161,7 +181,7 @@
 
                         </span>
                     </button>
-                    <img src="pictures/Boards Notifications.png" alt="" style="padding-bottom: 40px;">
+                    <img class="card-photo" src="pictures/Boards Notifications.png" alt="" style="padding-bottom: 40px;">
                 </div>
 
             </div>
@@ -179,16 +199,19 @@
             <div class="gallery-container">
                 <div class="gallery-item-line">
                     <img src="./pictures/gal1.png" alt="" class="gallery-item">
-                    <img src="./pictures/gal2.png" alt="" class="gallery-item">
-                    <img src="./pictures/gal3.png" alt="" class="gallery-item">
-                    <img src="./pictures/gal4.png" alt="" class="gallery-item">
+                    <img src="./pictures/gal2.png" alt="" class="gallery-item turnable">
+                    <img src="./pictures/gal3.png" alt="" class="gallery-item turnable">
+                    <img src="./pictures/gal4.png" alt="" class="gallery-item turnable">
+                    <img src="./pictures/gal8.png" alt="" class="gallery-item invturnable">
+                    <img src="./pictures/gal9.png" alt="" class="gallery-item invturnable">
+                    <img src="./pictures/gal10.png" alt="" class="gallery-item invturnable">
                 </div>
-                <div class="gallery-item-line">
+                <div class="gallery-item-line turnable">
                     <img src="./pictures/gal5.png" alt="" class="gallery-item">
                     <img src="./pictures/gal6.png" alt="" class="gallery-item">
                     <img src="./pictures/gal7.png" alt="" class="gallery-item">
                 </div>
-                <div class="gallery-item-line">
+                <div class="gallery-item-line gallery-button">
                     <button class="try-but" style="width: 136px; margin: 0; padding: 12px 36px;">
                         <span class="but-text">
                             See more
@@ -210,12 +233,17 @@
                 </div>
             </div>
             <div class="brands">
-                <img src="./icons/logos_apple-app-store.svg" class="brand" alt="">
-                <img src="./icons/logos_apiary.svg" class="brand" alt="">
-                <img src="./icons/logos_android-icon.svg" class="brand" alt="">
-                <img src="./icons/logos_basecamp.svg" class="brand" alt="">
-                <img src="./icons/logos_airbnb.svg" class="brand" alt="">
-                <img src="./icons/logos_ibm.svg" class="brand" alt="">
+                <div class="brand-line">
+                    <img src="./icons/logos_apple-app-store.svg" class="brand large" alt="">
+                    <img src="./icons/logos_apiary.svg" class="brand large" alt="">
+                    <img src="./icons/logos_android-icon.svg" class="brand large" alt="">
+                </div>
+                <div class="brand-line">
+                    <img src="./icons/logos_basecamp.svg" class="brand" alt="">
+                    <img src="./icons/logos_airbnb.svg" class="brand" alt="">
+                    <img src="./icons/logos_ibm.svg" class="brand small" alt="">
+
+                </div>
             </div>
             <div class="try-but_centered">
                 <button class="try-but" style="width: 136px; margin: 0; padding: 12px 36px;">
@@ -233,7 +261,7 @@
             </div>
             <div class="comment-containers">
                 <div class="vertical-containers">
-                    <div class="card card-black">
+                    <div class="card card-black turnable">
                         <div class="client">
                             <div>
                                 <img src="./pictures/avatar.png" alt="">
@@ -257,7 +285,7 @@ goal for the month and year.your financial
 goal for the month and year.
                         </div>
                     </div>
-                    <div class="card card-black">
+                    <div class="card card-black turnable">
                         <div class="client">
                             <div>
                                 <img src="./pictures/avatar (2).png" alt="">
@@ -280,8 +308,102 @@ you need to work to reach your financial
 goal for the month and year.
                         </div>
                     </div>
-                </div>
-                <div class="vertical-containers">
+                    <div class="card card-black invturnable">
+                        <div class="client">
+                            <div>
+                                <img src="./pictures/avatar.png" alt="">
+                            </div>
+                            <div class="text-content">
+                                <div>
+                                    Claire Bell
+                                </div>
+                                <div>
+                                    Designer
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paragraphe">
+                            Slate helps you see how many more days 
+you need to work to reach your financial 
+goal for the month and year. Slate helps 
+you see how many more days 
+you need to work to reach your financial 
+goal for the month and year.your financial 
+goal for the month and year.
+                        </div>
+                    </div>
+                    <div class="card card-black invturnable">
+                        <div class="client">
+                            <div>
+                                <img src="./pictures/avatar (2).png" alt="">
+                            </div>
+                            <div class="text-content">
+                                <div>
+                                    Ralph Fisher
+                                </div>
+                                <div>
+                                    Designer
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paragraphe" style="width: 244px;">
+                            Slate helps you see how many more days 
+you need to work to reach your financial 
+goal for the month and year. Slate helps 
+you see how many more days 
+you need to work to reach your financial 
+goal for the month and year.
+                        </div>
+                    </div>
+                    <div class="card card-black invturnable">
+                        <div class="client">
+                            <div>
+                                <img src="./pictures/avatar.png" alt="">
+                            </div>
+                            <div class="text-content">
+                                <div>
+                                    Claire Bell
+                                </div>
+                                <div>
+                                    Designer
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paragraphe">
+                            Slate helps you see how many more days 
+you need to work to reach your financial 
+goal for the month and year. Slate helps 
+you see how many more days 
+you need to work to reach your financial 
+goal for the month and year.your financial 
+goal for the month and year.
+                        </div>
+                    </div>
+                    <div class="card card-black invturnable">
+                        <div class="client">
+                            <div>
+                                <img src="./pictures/avatar.png" alt="">
+                            </div>
+                            <div class="text-content">
+                                <div>
+                                    Claire Bell
+                                </div>
+                                <div>
+                                    Designer
+                                </div>
+                            </div>
+                        </div>
+                        <div class="paragraphe">
+                            Slate helps you see how many more days 
+you need to work to reach your financial 
+goal for the month and year. Slate helps 
+you see how many more days 
+you need to work to reach your financial 
+goal for the month and year.your financial 
+goal for the month and year.
+                        </div>
+                    </div>
+                <div class="vertical-containers turnable">
                     <div class="card card-black">
                         <div class="client">
                             <div>
@@ -329,11 +451,12 @@ goal for the month and year.
                         </div>
                     </div>
                 </div>
+                </div>
             </div>
         </div>
         <div class="page CTA">
-            <div style="display: flex; justify-content: center;">
-                <div class="card card-new" style="border: 1px solid #343434;">
+            <div style="display: flex; justify-content: center;background-color: var(--second-background);">
+                <div class="card card-new turnable" style="border: 1px solid #343434;">
                     <div class="card-item">
                         <div class="column">
                             <div class="column-item" style="padding-top: 0;">
@@ -351,8 +474,22 @@ goal for the month and year.
             </div>
         </div>
         <img src="./pictures/Line Chart 1 (1).png" alt="" class="card-item right">
-    </div>
 
+
+    </div>
+    <div class="open invturnable">
+        <center>
+            <div class="text-huge_shrink" style="margin: 0; padding: 104px 96px 0 96px; line-height: 62px;">
+                OpenType features and Variable fonts
+            </div>
+            <button class="try-but try-but_color" style="width: 190px; margin: 52px 0 0 0; padding: 12px 36px;">
+                        <span class="but-text">
+                            Try For Free
+                        </span>            
+                    </button>
+        </center>
+        <img src="./pictures/Line Chart 1 (2).png" alt="" style="margin-top:90px;bottom: 0;">
+    </div>
     </div>
     </div>
     <div class="page footer" style="padding-bottom: 0px;">
@@ -360,7 +497,7 @@ goal for the month and year.
             <div class="foot-item">
                 <div class="foot-lists">
                     <div class="foot-list">
-                        <div class="left-text" style="padding: 0; margin: 0;">
+                        <div class="left-text" style="padding: 0;">
                             Fingertipe
                         </div>
                         <div>
@@ -379,7 +516,7 @@ goal for the month and year.
                         </div>
                     </div>
                     <div class="foot-list">
-                        <div class="left-text" style="padding: 0; margin: 0;">
+                        <div class="left-text" style="padding: 0;">
                             Resources
                         </div>
                         <div>
@@ -398,7 +535,7 @@ goal for the month and year.
                         </div>
                     </div>
                     <div class="foot-list">
-                        <div class="left-text" style="padding: 0; margin: 0;">
+                        <div class="left-text" style="padding: 0;">
                             About
                         </div>
                         <div>
@@ -424,7 +561,7 @@ goal for the month and year.
                         <div>
                             <img src="./icons/bx_bx-map.svg" heigth="38" alt="">
                         </div>
-                        <div class="paragraphe" style="padding:0 0 0 8px;margin: 0;">
+                        <div class="paragraphe paragraphe-no-margin" style="padding:0 0 0 8px;margin: 0;">
                             7480 Mockingbird Hill undefine
                         </div>
                     </div>
@@ -432,7 +569,7 @@ goal for the month and year.
                         <div>
                             <img src="./icons/ic_baseline-phone-android.svg" heigth="32" alt="">
                         </div>
-                        <div class="paragraphe" style="padding:0 0 0 8px;margin: 0;">
+                        <div class="paragraphe paragraphe-no-margin" style="padding:0 0 0 8px;margin: 0;">
                             (239) 555-0108
                         </div>
                     </div>
