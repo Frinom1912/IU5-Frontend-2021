@@ -17,9 +17,10 @@
 .w {
     /* max-width: 100%; */
     /* max-height: 100%; */
-    width: 98%;
+    width: 100%;
     position: absolute;
     z-index: 1;
+    bottom: 0;
 }
 
 .gr {
@@ -27,10 +28,6 @@
     position: absolute;
     z-index: 2;
     bottom: 0;
-}
-
-img.w_cut {
-    display: none;
 }
 
 .containter {
@@ -113,7 +110,7 @@ img.w_cut {
 }
 
 .foot-rows {
-    margin-left: 200px;
+    margin-left: 30%;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -263,9 +260,8 @@ img.w_cut {
     width: 50%;
 }
 
-.text-card {
-    height: 152px;
-    margin: 40px 94px 0px 94px;
+.card-photo {
+    width: 86%;
 }
 
 .right {
@@ -290,9 +286,15 @@ img.w_cut {
     margin-top: 60px;
 }
 
+.text-card {
+    height: 152px;
+    margin: 40px 20% 0px 20%;
+}
+
 .text-container_small {
     height: 652px;
     margin: 0;
+    margin-left: 10px;
 }
 
 .text-container_small_2x {
@@ -467,22 +469,21 @@ img.w_cut {
 }
 
 .frame {
-    margin: 80px 16% 0px 16%;
+    margin: 80px 8% 0px 8%;
     display: flex;
     align-items: center;
     height: 760px;
 }
 
 .frame-images {
-    position: relative;
+    display: flex;
     width: 70%;
     height: 759px;
 }
 
 .im-centered {
     height: 696px;
-    position: relative;
-    padding: 0px 4%;
+    padding: 0px;
     top: 0;
     left: 0;
     z-index: 1;
@@ -504,7 +505,7 @@ img.w_cut {
     font-weight: 400;
     font-size: 125%;
     line-height: 125%;
-    margin: 0px 31% 5px 31%;
+    margin: 0px;
     padding: 10px 0px;
     overflow: hidden;
 }
@@ -529,6 +530,20 @@ img.w_cut {
     width: 696px;
 }
 
+.w_cut {
+    display: none;
+}
+
+.text-margin {
+    margin: 0;
+}
+
+.text-second {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     background-color: var(--background-color);
     margin: 0;
@@ -541,19 +556,15 @@ body {
     color: var(--text-color);
 }
 
-@media screen and (max-width: 1100px) {
-    body {
-        font-size: 12px;
-    }
-    .text-huge {
-        font-size: 62px;
-        line-height: 72px;
+@media screen and (max-width: 1220px) {
+    .text-huge_shrink {
+        font-size: 40px;
     }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1100px) {
     .page1 {
-        height: 1235px;
+        height: 1735px;
     }
     .page2 {
         height: 1414px;
@@ -598,8 +609,8 @@ body {
     }
     .menu-icon {
         display: block;
-        width: 44px;
-        height: 27px;
+        width: 20%;
+        height: auto;
         padding-left: 27px;
     }
     .login {
@@ -668,8 +679,8 @@ body {
         padding: 10px;
     }
     .text-huge {
-        margin-left: 23%;
-        margin-right: 23%;
+        margin-left: 21%;
+        margin-right: 21%;
         font-weight: 400;
         font-size: 52px;
         line-height: 62px;
@@ -678,19 +689,10 @@ body {
         flex-flow: column;
         height: auto;
         width: auto;
-        margin: 57px 37%;
+        margin: 57px 37% 0 37%;
     }
     .try-but {
         margin: 8% 0;
-    }
-    img.w {
-        display: none;
-    }
-    img.w_cut {
-        display: block;
-        width: 100%;
-        max-width: 100%;
-        max-height: 100%;
     }
     .screens {
         width: 100%;
@@ -702,9 +704,9 @@ body {
         justify-content: center;
     }
     .im-centered {
-        height: 324px;
-        position: relative;
-        padding: 0px 4%;
+        display: block;
+        height: 406px;
+        padding: 10px 4% 0 4%;
         top: 0;
         left: 0;
         z-index: 1;
@@ -731,7 +733,6 @@ body {
     }
     .card-black {
         background-color: var(--background-color);
-        width: 100%;
         height: auto;
         align-items: unset;
         padding: 40px;
@@ -744,7 +745,7 @@ body {
         margin: 40px 30px 0px 30px;
     }
     .text-margin {
-        margin: 0 60px;
+        margin: 0 20%;
     }
     .text-second {
         font-size: 16px;
@@ -757,7 +758,7 @@ body {
     .gallery-item {
         border-radius: 12px;
         margin: 0 17px;
-        width: 60%;
+        width: 330px;
         height: 285px;
     }
     .gallery-item-line {
@@ -796,7 +797,8 @@ body {
         font-size: 20px;
     }
     .paragraphe {
-        width: 244px;
+        /* white-space: nowrap; */
+        width: auto;
     }
     .paragraphe-padding {
         font-size: 16px;
@@ -834,6 +836,13 @@ body {
     .open {
         height: 868px;
     }
+    .open-items {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: 578px;
+        justify-content: space-between;
+    }
     .foot {
         display: flex;
         margin: 0;
@@ -869,7 +878,54 @@ body {
     .paragraphe-no-margin {
         font-size: 16px;
         font-weight: 500;
-        white-space: nowrap;
+    }
+    .w {
+        display: none;
+    }
+    .w_cut {
+        display: block;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+    }
+    .gr {
+        width: 100%;
+        position: absolute;
+        z-index: 2;
+        bottom: 0;
+    }
+    body {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .page1 {
+        height: 1635px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .page1 {
+        height: 1535px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .page1 {
+        height: 1435px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .page1 {
+        height: 1335px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .open-img {
+        width: 100%;
     }
 }
 
@@ -883,7 +939,38 @@ body {
         align-items: center;
         margin: 0px 0px 0px 0;
     }
+    .text-content {
+        font-size: 12px;
+    }
+    .text-huge_shrink {
+        overflow: hidden;
+    }
+    .paragraphe {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .gallery-item {
+        height: 195px;
+        width: 220px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .text-content {
+        font-size: 8px;
+    }
+    .paragraphe {
+        font-size: 8px;
+    }
     img {
         max-width: 100%;
+    }
+    .text-huge {
+        font-size: 20px;
+    }
+    .text {
+        font-size: 12px;
     }
 }
