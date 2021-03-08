@@ -408,6 +408,12 @@ img {
     height: 50px;
 }
 
+.handler {
+    display: flex;
+    justify-content: center;
+    background-color: var(--background-color);
+}
+
 
 /* 
 .menuWrapper {
@@ -668,6 +674,9 @@ body {
         position: absolute;
         left: 65px;
         width: 232px;
+    }
+    .handler {
+        background-color: var(--second-background);
     }
     .text {
         text-align: center;
