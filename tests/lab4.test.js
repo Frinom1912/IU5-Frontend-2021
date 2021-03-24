@@ -23,8 +23,8 @@ test('getAnagramms 3', () => {
 });
 test('getAnagramms 4', () => {
     expect(getAnagramms(['мир', '222'])).toEqual([
-        ["222"],
         ["мир"],
+        ["222"],
     ]);
 });
 
@@ -70,18 +70,18 @@ test('get1DArray 2', () => {
 });
 
 
-// test('checkBrackets 1', () => {
-//     expect(checkBrackets('[(<>)]')).toBe(true);
-// });
-// test('checkBrackets 2', () => {
-//     expect(checkBrackets('([)]()<>')).toBe(false);
-// });
-// test('checkBrackets 3', () => {
-//     expect(checkBrackets('[[()]]([])<>')).toBe(true);
-// });
-// test('checkBrackets 4', () => {
-//     expect(checkBrackets('[]')).toBe(true);
-// });
-// test('checkBrackets 5', () => {
-//     expect(checkBrackets('')).toBe(true);
-// });
+test('checkBrackets 1', () => {
+    expect(checkBrackets('[(<>)]')).toBe(true);
+});
+test('checkBrackets 2', () => {
+    expect(checkBrackets('([)]()<>')).toBe(false);
+});
+test('checkBrackets 3', () => {
+    expect(checkBrackets('[[()]]([])<>')).toBe(true);
+});
+test('checkBrackets 4', () => {
+    expect(checkBrackets('[]')).toBe(true);
+});
+test('checkBrackets 5', () => {
+    expect(checkBrackets('')).toBe(true);
+});
