@@ -120,13 +120,13 @@
                         flagClick = false;
                 }, false);
 
-                field.addEventListener("mousemove", (event) => {
+                window.addEventListener("mousemove", (event) => {
                     if (flagClick) {
                         let a = field.getBoundingClientRect();
                         requestAnimationFrame(function move() {
-                            if (event.pageX + 31 < a.right)
+                            if (event.pageX < 1320 && event.pageX > 550)
                                 circle.style.left = Math.floor(event.pageX) + 'px';
-                            if (event.pageY < 1480)
+                            if (event.pageY < 1480 && event.pageY > 710)
                                 circle.style.top = Math.floor(event.pageY) + 'px';
                         })
                     }
