@@ -5,11 +5,208 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
     <title>Document</title>
 </head>
 
 <body>
+    <h2>Задание #1</h2>
+    <div class="part part1">
+        <div id="square">
+        </div>
+        <script>
+            const square = document.getElementById("square");
 
+            square.addEventListener("click", (event) => {
+                square.style.background = "rgb(" +
+                    Math.floor(Math.random() * 255).toString() +
+                    ", " +
+                    Math.floor(Math.random() * 255).toString() +
+                    ", " +
+                    Math.floor(Math.random() * 255).toString() +
+                    ")";
+            });
+        </script>
+    </div>
+
+    <h2>Задание #2</h2>
+    <div class="part part2">
+        <div id="timer">
+            00:00:00
+        </div>
+        <script>
+            const timer = document.getElementById("timer");
+            let flag = false;
+            let timeSecs = 0;
+            timer.addEventListener("mouseleave", (event) => {
+                flag = false;
+            });
+            timer.addEventListener("mouseenter", (event) => {
+                flag = true;
+                tim = setInterval(function() {
+                    if (!flag)
+                        clearInterval(tim);
+                    else {
+                        timeSecs += 1;
+                        let hours = Math.trunc(timeSecs / 60 / 60 % 60);
+                        let mins = Math.trunc(timeSecs / 60 % 60);
+                        let secs = Math.trunc(timeSecs % 60);
+                        let str = "";
+                        if (hours < 10)
+                            str += "0";
+                        str += hours.toString() + ":";
+                        if (mins < 10)
+                            str += "0";
+                        str += mins.toString() + ":";
+
+                        if (secs < 10)
+                            str += "0";
+                        str += secs.toString();
+                        timer.textContent = str;
+                    }
+                }, 1000)
+            });
+        </script>
+    </div>
+
+    <h2>Задание #3</h2>
+    <div class="part part3">
+        <div id="dropdown">
+            <button onclick="Show()" class="dr-but">Список лаб</button>
+            <div id="dropdown-content" class="content">
+                <a href="../lab1">Lab1</a>
+                <a href="../lab2">Lab2</a>
+                <a href="../lab3">Lab3</a>
+                <a href="../lab4">Lab4</a>
+                <a href="../lab5">Lab5</a>
+            </div>
+        </div>
+        <script>
+            function Show() {
+                document.getElementById("dropdown-content").classList.toggle("show");
+            }
+
+            window.onclick = function(event) {
+                if (!event.target.matches('.dr-but')) {
+                    let content = document.getElementsByClassName("content");
+                    for (let i = 0; i < content.length; i++) {
+                        if (content[i].classList.contains('show')) {
+                            content[i].classList.remove('show');
+                        }
+                    }
+                }
+            }
+        </script>
+    </div>
+
+    <h2>Задание #4</h2>
+    <div class="part part4">
+        <div id="field">
+            <div id="circle">
+
+            </div>
+
+            <script>
+                const circle = document.getElementById("circle");
+                const field = document.getElementById("field");
+                let flagClick = false;
+
+                circle.addEventListener("click", (event) => {
+                    flagClick = true;
+                });
+
+                window.addEventListener("keydown", (event) => {
+                    if (event.key == "Escape" || event.key == "Esc")
+                        flagClick = false;
+                }, false);
+
+                window.addEventListener("mousemove", (event) => {
+                    if (flagClick) {
+                        let a = field.getBoundingClientRect();
+                        requestAnimationFrame(function move() {
+                            if (event.pageX < 1320 && event.pageX > 550)
+                                circle.style.left = Math.floor(event.pageX) + 'px';
+                            if (event.pageY < 1480 && event.pageY > 710)
+                                circle.style.top = Math.floor(event.pageY) + 'px';
+                        })
+                    }
+                }, false);
+            </script>
+        </div>
+    </div>
+
+    <h2>Задание #5</h2>
+    <div class="part part5">
+        <button onclick="API()" class="but">Список серий</button>
+        <div id="table" class="">
+
+        </div>
+        <script>
+            let flagAPI = false;
+            let flagTableDone = false;
+
+            function API() {
+                if (!flagAPI) {
+                    let series = fetch("https://www.breakingbadapi.com/api/episodes")
+                        .then((data) => {
+                            return data.json();
+                        })
+                        .then((data) => {
+                            let body = document.getElementById("table");
+                            let table = document.createElement("table");
+                            table.style.width = "100%";
+                            table.style.border = "1px solid black";
+                            let tr = table.insertRow();
+                            let td = tr.insertCell();
+                            td.appendChild(document.createTextNode("Номер эпизода"));
+                            td.style.border = "1px solid black";
+                            td = tr.insertCell();
+                            td.appendChild(document.createTextNode("Название"));
+                            td.style.border = "1px solid black";
+                            td = tr.insertCell();
+                            td.appendChild(document.createTextNode("Номер сезона"));
+                            td.style.border = "1px solid black";
+                            td = tr.insertCell();
+                            td.appendChild(document.createTextNode("Дата выхода"));
+                            td.style.border = "1px solid black";
+                            for (let i = 0; i < data.length; i++) {
+                                tr = table.insertRow();
+                                td = tr.insertCell();
+                                td.appendChild(document.createTextNode(data[i].episode_id));
+                                td.style.border = "1px solid black";
+                                td = tr.insertCell();
+                                td.appendChild(document.createTextNode(data[i].title));
+                                td.style.border = "1px solid black";
+                                td = tr.insertCell();
+                                td.appendChild(document.createTextNode(data[i].season));
+                                td.style.border = "1px solid black";
+                                td = tr.insertCell();
+                                td.appendChild(document.createTextNode(data[i].air_date));
+                                td.style.border = "1px solid black";
+                            }
+
+                            body.appendChild(table);
+                            flagAPI = true;
+                            flagTableDone = true;
+                        });
+                } else if (flagAPI && flagTableDone) {
+                    console.log(1);
+                    let content = document.getElementById("table");
+                    if (!content.classList.contains('hide')) {
+                        content.classList.add('hide');
+                    }
+                    flagTableDone = false;
+                } else if (!flagTableDone) {
+                    console.log(2);
+                    let content = document.getElementById("table");
+                    if (content.classList.contains('hide')) {
+                        content.classList.remove('hide');
+                    }
+                    flagTableDone = true;
+                }
+            }
+        </script>
+    </div>
 </body>
 
 </html>
