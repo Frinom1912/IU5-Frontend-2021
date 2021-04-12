@@ -40,24 +40,26 @@ async function getCityInfo(city) {
             return data.json();
         })
         .then((data) => {
-            let now = new Date();
-            document.getElementById("city").textContent = data.name + " " + (now.getHours().toString() > 10 ? (now.getHours().toString()) : ("0" + now.getHours().toString())) + ":" + (now.getMinutes().toString() > 10 ? (now.getMinutes().toString()) : ("0" + now.getMinutes().toString())) + " (МСК)";
-            document.getElementById("cel").textContent = Math.round(data.main.temp) >= 0 ? "+" + Math.round(data.main.temp).toString() + " " + cap(data.weather[0].description) : "-" + Math.round(data.main.temp).toString() + " " + cap(data.weather[0].description);
-            document.getElementById("second").textContent = `Облачность: ${data.clouds.all}%, Влажность: ${data.main.humidity}%, Скорость ветра: ${data.wind.speed} м/сек`;
-            document.getElementById("icon").src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-            setPic(data.weather[0].icon.substring(0, 2));
-            fetch(forecast)
-                .then((forecast_data) => {
-                    return forecast_data.json();
-                })
-                .then((forecast_data) => {
-                    for (let i = 1; i < 5; i++) {
-                        document.getElementById((i).toString()).children[0].textContent = forecast_data.list[i].dt_txt;
-                        document.getElementById((i).toString()).children[1].children[0].textContent = Math.round(forecast_data.list[i].main.temp) >= 0 ? "+" + Math.round(forecast_data.list[i].main.temp).toString() + " " + cap(forecast_data.list[i].weather[0].description) : "-" + Math.round(forecast_data.list[i].main.temp).toString() + " " + cap(forecast_data.list[i].weather[0].description);
-                        document.getElementById((i).toString()).children[2].src = `https://openweathermap.org/img/wn/${forecast_data.list[i].weather[0].icon}@2x.png`;
-                    }
+            if (data.cod == 200) {
+                let now = new Date();
+                document.getElementById("city").textContent = data.name + " " + (now.getHours().toString() > 10 ? (now.getHours().toString()) : ("0" + now.getHours().toString())) + ":" + (now.getMinutes().toString() > 10 ? (now.getMinutes().toString()) : ("0" + now.getMinutes().toString())) + " (МСК)";
+                document.getElementById("cel").textContent = Math.round(data.main.temp) >= 0 ? "+" + Math.round(data.main.temp).toString() + " " + cap(data.weather[0].description) : "-" + Math.round(data.main.temp).toString() + " " + cap(data.weather[0].description);
+                document.getElementById("second").textContent = `Облачность: ${data.clouds.all}%, Влажность: ${data.main.humidity}%, Скорость ветра: ${data.wind.speed} м/сек`;
+                document.getElementById("icon").src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+                setPic(data.weather[0].icon.substring(0, 2));
+                fetch(forecast)
+                    .then((forecast_data) => {
+                        return forecast_data.json();
+                    })
+                    .then((forecast_data) => {
+                        for (let i = 1; i < 5; i++) {
+                            document.getElementById((i).toString()).children[0].textContent = forecast_data.list[i].dt_txt;
+                            document.getElementById((i).toString()).children[1].children[0].textContent = Math.round(forecast_data.list[i].main.temp) >= 0 ? "+" + Math.round(forecast_data.list[i].main.temp).toString() + " " + cap(forecast_data.list[i].weather[0].description) : "-" + Math.round(forecast_data.list[i].main.temp).toString() + " " + cap(forecast_data.list[i].weather[0].description);
+                            document.getElementById((i).toString()).children[2].src = `https://openweathermap.org/img/wn/${forecast_data.list[i].weather[0].icon}@2x.png`;
+                        }
 
-                })
+                    })
+            }
         })
         .catch(() => {
             alert('Город не найден, повторите ввод!');
