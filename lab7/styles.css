@@ -1,0 +1,176 @@
+.content {
+    display: flex;
+    height: 80%;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #948E8E;
+    height: 20%;
+}
+
+.left-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 45%;
+    padding-left: 5%;
+}
+
+.right-header {
+    display: flex;
+    flex-direction: row;
+    width: 45%;
+    padding-right: 5%;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    background-color: #C4C4C4;
+    border-radius: 10px;
+    width: 320px;
+    margin-left: auto;
+    margin-right: 0px;
+    height: 60px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    margin: 2%;
+    font-size: 100%;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid black;
+    width: 98%;
+    font-family: 'Bebas Neue';
+}
+
+p::selection {
+    background: transparent;
+}
+
+p {
+    color: black;
+    z-index: 999;
+    margin: 0;
+}
+
+#cel {
+    color: white;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 90%;
+    width: 70%;
+    border-radius: 20px;
+    margin: 4%;
+    background-image: url("pictures/foggy.jpg");
+    background-size: 100% 100%;
+}
+
+.city {
+    font-size: 125%;
+    color: white;
+}
+
+.curWeather {
+    display: flex;
+    flex-direction: column;
+}
+
+.line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100%;
+    flex-wrap: nowrap;
+    color: white;
+}
+
+.forecast {
+    display: flex;
+    flex-direction: row;
+    margin-top: auto;
+    margin-bottom: 0px;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.forecast-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    flex-wrap: nowrap;
+    height: 200px;
+    width: 22%;
+    font-size: 70%;
+    color: white;
+    border: 1px solid white;
+}
+
+.small_text {
+    font-size: 70%;
+    color: rgb(255, 255, 255);
+}
+
+.smaller {
+    font-size: 55%;
+}
+
+body,
+html {
+    width: 100%;
+    height: 660px;
+    margin: 0;
+    padding: 0;
+    background-color: #C4C4C4;
+    font-size: 36px;
+    font-family: 'Bebas Neue';
+}
+
+.hide {
+    display: flex;
+}
+
+@media screen and (max-width: 950px) {
+    body,
+    html {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    body,
+    html {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .hide {
+        display: none;
+    }
+    .forecast-box {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .hide_img {
+        display: none;
+    }
+    body,
+    html {
+        font-size: 16px;
+    }
+}
