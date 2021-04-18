@@ -5,11 +5,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
     <title>Lab7</title>
 </head>
 
 <body>
+    <div class="header">
+        <div class="left-header">
+            <p>
+                Погода
+            </p>
+            <img src="pictures/weather.png" class="hide_img" alt="" style="padding-left: 10px;width: 98px; height: 92px;">
+        </div>
+        <div class="right-header">
+            <form action="" class="search">
+                <input type="text" class="search-box" id="bar" placeholder="Поиск...">
+                <script src="./script.js"></script>
+            </form>
+        </div>
+    </div>
+    <div id="content" class="content">
+        <div class="container" id="containerok">
+            <p class="city" id="city" style="padding:10px"></p>
+            <div class="curWeather">
+                <div class="line">
+                    <p id="cel"></p>
+                    <img src="" alt="" id="icon">
+                </div>
+                <div class="line" style="font-size: 50%;" id="second">
+                </div>
+            </div>
+            <div class="forecast">
+                <div class="forecast-box" id="1">
+                    <p class="small_text">
 
+                    </p>
+                    <div class="line">
+                        <p class="small_text smaller"></p>
+                    </div>
+                    <img src="" alt="">
+                </div>
+                <div class="forecast-box" id="2">
+                    <p class="small_text">
+
+                    </p>
+                    <div class="line">
+                        <p class="small_text smaller"></p>
+                    </div>
+                    <img src="" alt="">
+                </div>
+                <div class="forecast-box hide" id="3">
+                    <p class="small_text">
+
+                    </p>
+                    <div class="line">
+                        <p class="small_text smaller"></p>
+                    </div>
+                    <img src="" alt="">
+                </div>
+                <div class="forecast-box hide" id="4">
+                    <p class="small_text">
+
+                    </p>
+                    <div class="line">
+                        <p class="small_text smaller"></p>
+                    </div>
+                    <img src="" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
