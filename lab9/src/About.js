@@ -18,7 +18,7 @@ function About({user}) {
     const BackClick = () => {
       setUser({});
       ClearLocalStorage();
-      h.push(`${url}/index.html`);
+      h.push(`${url}/`);
     }
   
     useEffect(() => {
