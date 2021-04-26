@@ -1,10 +1,10 @@
 import React from 'react'
 import "./App.css"
 import Card from "./Card"
-import {ClearLocalStorage} from "./Funcs"
+import {ClearLocalStorage, GetURL} from "./Funcs"
 import {Error} from "./Funcs"
 import {useEffect, useState} from 'react';
-import {useHistory} from 'react-router-dom';
+import {useHistory, useRouteMatch} from 'react-router-dom';
 
 function About({user}) {
     const [username, setUser] = useState({});
@@ -14,10 +14,11 @@ function About({user}) {
     if(user === "" && localStorage.length !== 0) {
       user = localStorage.getItem(`username`)
     }
+    const url = GetURL(useRouteMatch().url);
     const BackClick = () => {
       setUser({});
       ClearLocalStorage();
-      h.push("/");
+      h.push(`${url}/`);
     }
   
     useEffect(() => {

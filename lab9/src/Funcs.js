@@ -16,3 +16,7 @@ export function UpdateLocalStorage(user, exists) {
     );
   }
 
+  export function GetURL(url) {
+    return (url.charAt(url.length - 1) === "/") ? url.slice(0, -1) : url;
+  }
+

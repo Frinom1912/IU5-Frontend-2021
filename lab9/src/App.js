@@ -10,10 +10,10 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/">
+        <Route exact path="/lab9/build">
           <Home tryFind={(user) => setUsername(user)}/>
         </Route>
-        <Route path="/about">
+        <Route path="/lab9/build">
           <About user={username}/>
         </Route>
       </Switch>
