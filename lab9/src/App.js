@@ -6,14 +6,21 @@ import About from "./About"
 
 function App() {
   const [username, setUsername] = useState("");
-
+  let lpath="";
+  let flag = false;
+  if (process.env.REACT_APP_ENV === "dev") {
+    lpath = "/"
+    flag = true;
+  }
+  else
+    lpath = "/lab9/build/index.html"
   return (
     <Router>
       <Switch>
-        <Route exact path="/lab9/build/index.html">
+        <Route exact path={lpath}>
           <Home tryFind={(user) => setUsername(user)}/>
         </Route>
-        <Route path="/lab9/build/index.html">
+        <Route path={ flag ? lpath: lpath+"/about"}>
           <About user={username}/>
         </Route>
       </Switch>

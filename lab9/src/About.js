@@ -8,6 +8,7 @@ import {useHistory, useRouteMatch} from 'react-router-dom';
 
 function About({user}) {
     const [username, setUser] = useState({});
+    const [reps, setReps] = useState({});
     const h = useHistory();
     const [jobsDone, setJobs] = useState(false);
     const [cleenUser, setC] = useState(false);
@@ -22,7 +23,6 @@ function About({user}) {
     }
   
     useEffect(() => {
-  
       if(user.length > 0) {
         fetch(`https://api.github.com/users/${user}`,
           {
@@ -38,19 +38,37 @@ function About({user}) {
         })
         .then((data) => {
           setUser(data);
-          setJobs(true);
+          fetch(data.repos_url,
+            {
+              Authorization: process.env.REACT_APP_KEY,
+            })
+          .then((data_r) => {
+            if(data_r.status === 200) {
+              console.log(data_r);
+              return data_r.json();
+            }
+            else {
+              return {};
+            }
+          })
+          .then((data_r) => {
+            setReps(data_r);
+            setJobs(true);
+          })
+  
         });
       }
       else {
         setC(true);
       }
     }, [user]);
+
     return (
-      <div id="cont" className="container container-huge">
+      <div id="cont" className="container container-huge" style={{height: "auto"}}>
         {
-            cleenUser ? <Error user={user}/> : (jobsDone ? <Card userlist={username}/> : <div className="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>)
+            cleenUser ? <Error user={user}/> : (jobsDone ? <Card userlist={username} replist={reps}/> : <div className="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>)
         }
-        <button className="search-button" onClick={BackClick}>Вернуться</button>
+        <button className="search-button" style={{marginBottom: "30px"}} onClick={BackClick}>Вернуться</button>
       </div>
     );
   }
